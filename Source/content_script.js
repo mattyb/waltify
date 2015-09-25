@@ -21,12 +21,26 @@ function handleText(textNode) {
 
 function replaceText(v)
 {
-    // Fix some misspellings
-    v = v.replace(/\b(M|m)illienial(s)?\b/g, "$1illennial$2");
-    v = v.replace(/\b(M|m)illenial(s)?\b/g, "$1illennial$2");
-    v = v.replace(/\b(M|m)ilennial(s)?\b/g, "$1illennial$2");
-    v = v.replace(/\b(M|m)ilenial(s)?\b/g, "$1illennial$2");
+    //v = v.replace(/\b(M|m)illienial(s)?\b/g, "$1illennial$2");
+    //v = v.replace(/\b(M|m)illenial(s)?\b/g, "$1illennial$2");
+    //v = v.replace(/\b(M|m)ilennial(s)?\b/g, "$1illennial$2");
+    //v = v.replace(/\b(M|m)ilenial(s)?\b/g, "$1illennial$2");
 
+    // Snakes = Sweet
+    v = v.replace(/\bgood\b/gi, "Snakes");
+    v = v.replace(/\bgreat\b/gi, "Snakes");
+    v = v.replace(/\bawesome\b/gi, "Snakes");
+    v = v.replace(/\bfun\b/gi, "Snakes");
+    v = v.replace(/\bhappy\b/gi, "Snakes");
+
+    v = v.replace(/\bthing\b/gi, "regular old thing");
+	i_statements = v.match(/(?:^.)[\w\d]+\bI\b[\w\d]+(?:.!?)/)
+    for (i = 0; i < i_statements.length; i++ {
+		capital_i_statement = i_statement[i].toUpperCase()
+		v = v.replace("/"+i_statement[i]+"/", capital_i_statement)
+	}
+
+	/*
     // Millennial Generation
     v = v.replace(
         /\b(?:Millennial Generation)|(?:Generation Millennial)\b/g,
@@ -217,6 +231,7 @@ function replaceText(v)
         /\b(?:precarious generation)|(?:generation precarious)\b/g,
         "gargouille"
     );
+	*/
 
     return v;
 }
