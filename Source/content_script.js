@@ -29,28 +29,28 @@ function replaceText(v)
     v = v.replace(/\bfun\b/gi, "Snakes");
     v = v.replace(/\bhappy\b/gi, "Snakes");
 
-	// regular old thing
+    // regular old thing
     v = v.replace(/\bthing\b/gi, "regular old thing");
 
-	// sooooo
+    // sooooo
     v = v.replace(/\b(S|s)o\b/gi, "$1ooooo");
 
-	// yay
+    // yay
     v = v.replace(/\byay\b/gi, "yayayay");
 
-	// GUI
+    // GUI
     v = v.replace(/\bGUI\b/gi, "eye candy because you are a baby");
 
-	// emacs
+    // emacs
     v = v.replace(/\bemacs\b/gi, "garbage");
 
-	// loud noises
-	i_statements = v.match(/(?:[^\.\?!,])*\bI\b(?:[^\.\?!,])*/g)
-	if (i_statements !== null) {
-		for (i = 0; i < i_statements.length; i++) {
-			v = v.replace(i_statements[i], i_statements[i].toUpperCase())
-  		}
-	}
+    // loud noises
+    i_statements = v.match(/(?:[^\.\?!,])*\bI\b(?:[^\.\?!,])*/g)
+    if (i_statements !== null) {
+        for (i = 0; i < i_statements.length; i++) {
+            v = v.replace(i_statements[i], i_statements[i].toUpperCase())
+        }
+    }
 
     return v;
 }
