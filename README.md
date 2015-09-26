@@ -2,7 +2,7 @@
 
 Browser extension for when you miss Waltiness
 
-Based on ericwbailey/millennials-to-snake-people
+Based on [ericwbailey/millennials-to-snake-people](https://github.com/ericwbailey/millennials-to-snake-people)
 
 ## Development
 
