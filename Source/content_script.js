@@ -84,7 +84,15 @@ function walkAndObserve(doc) {
 
     // Do the initial text replacements in the document body and title
     walk(doc.body);
-    doc.title = "In Which We " + replaceText(doc.title);
+	if (doc.title.search(/inbox/i) >= 0) {
+		doc.title = "In Which We Read Our Email"
+	} else if (doc.title == "Google" || doc.title.search(/google search/i) >= 0) {
+		doc.title = "In Which We Search The Tubes"
+	} else if (doc.title.search(/github/i) >= 0) {
+		doc.title = "In Which We Commit Code"
+	} else if (doc.title.search(/civis/i) >= 0) {
+		doc.title = "In Which We Use The Platform"
+	}
 
     // Observe the body so that we replace text in any added/modified nodes
     bodyObserver = new MutationObserver(observerCallback);
