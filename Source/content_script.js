@@ -84,7 +84,7 @@ function walkAndObserve(doc) {
 
     // Do the initial text replacements in the document body and title
     walk(doc.body);
-    doc.title = replaceText(doc.title);
+    doc.title = "In Which We " + replaceText(doc.title);
 
     // Observe the body so that we replace text in any added/modified nodes
     bodyObserver = new MutationObserver(observerCallback);
