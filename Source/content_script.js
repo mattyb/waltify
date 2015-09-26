@@ -48,7 +48,9 @@ function replaceText(v)
     i_statements = v.match(/(?:[^\.\?!,])*\bI\b(?:[^\.\?!,])*/g)
     if (i_statements !== null) {
         for (i = 0; i < i_statements.length; i++) {
-            v = v.replace(i_statements[i], i_statements[i].toUpperCase())
+			if Math.random() > 0.5 {
+	            v = v.replace(i_statements[i], i_statements[i].toUpperCase())
+			}
         }
     }
 
