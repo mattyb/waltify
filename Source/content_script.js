@@ -41,9 +41,6 @@ function replaceText(v)
     // GUI
     v = v.replace(/\bGUI\b/gi, "eye candy because you are a baby");
 
-    // emacs
-    v = v.replace(/\bemacs\b/gi, "garbage");
-
     // mrs. walt askew
     v = v.replace(/\bgrandma\b/gi, "Mrs. Walter Askew");
     v = v.replace(/\bsusan\b/gi, "Mrs. Walter Askew");
