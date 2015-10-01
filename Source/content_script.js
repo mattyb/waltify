@@ -44,6 +44,10 @@ function replaceText(v)
     // emacs
     v = v.replace(/\bemacs\b/gi, "garbage");
 
+    // mrs. walt askew
+    v = v.replace(/\bgrandma\b/gi, "Mrs. Walter Askew");
+    v = v.replace(/\bsusan\b/gi, "Mrs. Walter Askew");
+
     // loud noises
     i_statements = v.match(/(?:[^\.\?!,])*\bI\b(?:[^\.\?!,])*/g)
     if (i_statements !== null) {
