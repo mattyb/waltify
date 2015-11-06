@@ -54,6 +54,12 @@ function replaceText(v)
 			}
         }
     }
+    
+    // clean it
+    v = v.replace(/\bclean it\b/gi, "soak it and yourself in alcohol");
+
+    // whiskey
+    v = v.replace(/\bwater\b/gi, "whiskey");
 
     return v;
 }
